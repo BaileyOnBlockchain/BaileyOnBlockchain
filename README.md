@@ -59,8 +59,8 @@ No VC. No team. No compromise.
 | ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) | ![Base](https://img.shields.io/badge/Base_L2-0052FF?style=flat&logo=coinbase&logoColor=white) |
 | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | ![XMTP](https://img.shields.io/badge/XMTP-000000?style=flat&logo=ethereum&logoColor=white) |
 | ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white) | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) |
-| | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white) | ![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=flat&logo=web3dotjs&logoColor=white) |
-| | ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberrypi&logoColor=white) | ![wagmi](https://img.shields.io/badge/wagmi-1C1C1C?style=flat&logo=ethereum&logoColor=white) |
+| ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white) | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white) | ![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=flat&logo=web3dotjs&logoColor=white) |
+| ![Binary](https://img.shields.io/badge/Binary_Analysis-555555?style=flat&logo=buffer&logoColor=white) | ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberrypi&logoColor=white) | ![wagmi](https://img.shields.io/badge/wagmi-1C1C1C?style=flat&logo=ethereum&logoColor=white) |
 | | ![Semaphore](https://img.shields.io/badge/Semaphore-6F4E37?style=flat&logo=ethereum&logoColor=white) | ![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat&logo=solana&logoColor=white) |
 
 ---
