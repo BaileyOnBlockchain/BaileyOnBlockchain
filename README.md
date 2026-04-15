@@ -1,5 +1,5 @@
 # Don Blockchain Bailey — @BaileyOnBlockchain
-> 4 years deep. Solo builder. Privacy maximalist. Encryption enthusiast.  
+> 5 years deep. Solo builder. Privacy maximalist. Encryption enthusiast.  
 > I don't wait for teams. I ship.
 
 ---
@@ -89,4 +89,4 @@ If that's you — welcome to the network.
 
 ---
 
-*4 years. No degree. No team. Just shipping.*
+*5 years. No degree. No team. Just shipping.*
