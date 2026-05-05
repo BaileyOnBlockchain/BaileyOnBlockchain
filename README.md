@@ -62,10 +62,10 @@ Not a wrapper. Not a template. Every system below was designed, coded, and shipp
 ### CTX Protocol — *Ongoing*
 Active contract building on-chain intelligence and risk tooling for [CTX Protocol](https://ctx.xyz).
 
-**Liquidation Cluster & Squeeze Risk Intelligence** *(Private)*  
+**Liquidation Cluster & Squeeze Risk Intelligence** 
 Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management — not the kind of thing you open-source.
 
-**[token-launch-screener-mcp](https://github.com/BaileyOnBlockchain/token-launch-screener-mcp)** *(Public)*  
+**Token Launch Screener** 
 MCP server that gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Plugs directly into Claude and other MCP-compatible agents.
 
 > CTX Protocol brought me in because the work is real. The systems above speak for themselves.
