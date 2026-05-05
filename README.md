@@ -10,7 +10,7 @@
 [![X Project](https://img.shields.io/badge/@odennetworkXR-0052FF?style=flat&logo=x&logoColor=white)](https://x.com/odennetworkXR)
 [![YouTube](https://img.shields.io/badge/@BailOnBlockchain-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@BailOnBlockchain)
 [![Kick](https://img.shields.io/badge/blockchainbailey-53FC18?style=flat&logo=kick&logoColor=black)](https://kick.com/blockchainbailey)
-[![Website](https://img.shields.io/badge/odennetworkxr.com-7C3AED?style=flat&logo=vercel&logoColor=white)](https://odennetworkxr.com)
+[![Website](https://img.shields.io/badge/odennetworkxr.com-4C1D95?style=flat&logo=vercel&logoColor=white)](https://odennetworkxr.com)
 
 </div>
 
@@ -19,13 +19,56 @@
 ## What I'm Building
 
 ### [Oden Network XR](https://odennetworkxr.com)
-Privacy-first decentralised social dapp on Base L2.  
-E2EE messaging via XMTP V3. ZK anonymous posting via Semaphore + Groth16.  
-On-chain reputation. Encrypted groups. Direct wallet-to-wallet tipping.
+Privacy-first decentralised social dapp — built solo, end to end, on Base L2.
 
-No team. No VC. Built and shipped solo.
+Not a wrapper. Not a template. Every system below was designed, coded, and shipped by one person.
+
+**Encrypted Messaging**
+- End-to-end encrypted direct messaging via **XMTP V3** — multi-device session management, installation limit recovery, attachment support, real-time conversation streaming
+- **Encrypted group chat** — Discord-style architecture with text channels, voice channels (Opus codec), role-based access, nuclear self-delete messages, and real-time group events
+
+**Zero-Knowledge & Anonymous Posting**
+- **ZK anonymous posts** via **Semaphore + Groth16** — identity commitments, nullifier hashing, on-chain verification. Post without leaving a trace
+- **Self-nuking posts** — auto-delete timestamps baked at the protocol level
+- **AI content moderation** with proof generation
+
+**On-Chain Systems (Base L2)**
+- `XR_TOKEN` — ERC-20 with tipping, burning, permit
+- `PRIVNET` — post management, earnings, tip routing
+- `STAKING_VAULT` — lock periods, yield mechanics
+- `SEMAPHORE` — ZK group proof verification
+- `PROFILE_NFT` — on-chain profile verification
+- `SCAM_REPORTS` — community scam registry
+- **EIP-4337 Account Abstraction** — paymaster for gasless transactions
+
+**Reputation & Trust**
+- **Sovereignty Score (0–100)** — wallet age, transaction depth, protocol diversity, cross-chain activity, sybil flags. Not a vibe. Maths
+- **Gitcoin Passport** integration, community scam reporting, multi-factor reputation
+
+**Trading Intelligence**
+- **AI-powered trading signals** — confidence scoring, entry/exit targets, risk/reward ratios
+- **16+ technical indicators** — RSI, MACD, Bollinger Bands, EMA (20/50/200), Stochastic RSI, Williams %R, ROC, ADX, ATR, support/resistance, market regime detection
+- **Multi-source price feeds** — Binance, CoinGecko, Jupiter with fallback routing
+
+**Dead Man's Switch**
+- On-chain cryptographic dead man's switch — encrypted last words, time-locked triggers, beneficiary configuration, multi-alert architecture
 
 → [Launch dApp](https://odennetworkxr.com) · [@odennetworkXR](https://x.com/odennetworkXR)
+
+---
+
+## Contract Work
+
+### CTX Protocol — *Ongoing*
+Active contract building on-chain intelligence and risk tooling for [CTX Protocol](https://ctx.xyz).
+
+**Liquidation Cluster & Squeeze Risk Intelligence** *(Private)*  
+Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management — not the kind of thing you open-source.
+
+**[token-launch-screener-mcp](https://github.com/BaileyOnBlockchain/token-launch-screener-mcp)** *(Public)*  
+MCP server that gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Plugs directly into Claude and other MCP-compatible agents.
+
+> CTX Protocol brought me in because the work is real. The systems above speak for themselves.
 
 ---
 
@@ -33,58 +76,53 @@ No team. No VC. Built and shipped solo.
 
 ### [WalletConnectFixer](https://github.com/BaileyOnBlockchain/WalletConnectFixer)
 Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures.  
-Documented and open-sourced after debugging the actual root causes — not just the symptoms.
+Documented and open-sourced after debugging actual root causes in production.
 
 **Problems solved:**
-- MetaMask silently auto-approving stale WC sessions without showing a signing prompt
-- Opera GX / third-party `isMetaMask` injections breaking the auth flow
-- Connection handshake dropping due to async IndexedDB race on session clear
-- AppKit two-step flow getting interrupted by premature timeout logic
-- Auto network switch prompt on connect for chain-specific dapps
+- MetaMask silently auto-approving stale WC sessions without a signing prompt
+- Opera GX / third-party `isMetaMask` injections hijacking the auth flow
+- WC handshake dropping due to async IndexedDB race on session clear
+- AppKit two-step flow interrupted by premature timeout logic
+- Auto network-switch prompt on connect for chain-specific dapps
 
 ---
 
-## What I've Built
-
-> Most of what I build is private — client systems, personal infrastructure, tools that run quietly in the background. What's public is a fraction.
+## Other Things I've Built
 
 **AI & Agents**
 - **Grok Cracked** — terminal-native agentic coding assistant. Full tool loop: file editing, bash, ripgrep, MCP server support, streaming Ink UI
-- **Hansel** — multimodal AI bot. Multi-API routing, image analysis, voice recognition, Solana trading execution. Custom React frontend. Runs on a Pi
-- **Private AI Node** — custom multi-model AI system running 24/7 on a private server. Always online. Not on GitHub. Not for sale
-- **Telegram Bot Ecosystem** — multi-provider AI routing (Groq, Claude, OpenRouter), voice I/O, reminders, on-chain execution
+- **Hansel** — multimodal AI bot. Multi-API routing, image analysis, voice recognition, Solana trading execution. Runs on a Pi
+- **Private AI Node** — multi-model system running 24/7 on a private server. Always online. Not on GitHub. Not for sale
+- **Telegram Bot Ecosystem** — multi-provider AI routing (Groq, Claude, OpenRouter), voice I/O, on-chain execution
 
-**Cryptography & Privacy**
-- **XMTP V3 — Core Specialism.** E2EE messaging layers across multiple projects: encrypted group chat, wallet-to-wallet DMs, encrypted notification pipelines, private social primitives. If it touches a message, it's encrypted by default
-- **ZK-Proof Systems** — zero-knowledge proof architecture for anonymous interactions. Membership, eligibility, and identity verification with zero data exposure
-- **Semaphore Protocol** — deployed Semaphore for ZK anonymous posting. Groth16 proof generation, on-chain verification, identity commitments. Post without a trace
-- **Cryptographic Security Models** — custom implementations for testing encryption strength, key exchange protocols, and attack resistance across symmetric and asymmetric systems
+**Quant & Trading**
+- **Solana Scalping Bot** — live on mainnet. RSI/MACD/BB signals, dip-buying logic, autonomous risk management. Real money. Not a demo
+- **AI Crypto Quant** — PyTorch price forecasting, backtester with equity curves + Sharpe ratio
+- **Financial Tooling Suite** — portfolio tracking, P&L dashboards, quant signal engines, market data pipelines
 
-**Web3 & On-Chain**
-- **Blockchain Rewards Ecosystem** — fully on-chain rewards system. Custom smart contracts, token distribution logic, staking mechanics, user-facing dashboard. Solidity to frontend. Solo
-- **Solana Trading Bot** — live and profitable. Autonomous scalping on mainnet. RSI/MACD/BB signal stack, dip-buying logic, risk management. Not a demo
-- **AI Crypto Quant Bot** — PyTorch price forecasting, backtester with equity curves + Sharpe ratio
-- **Dead Man's Switch** — on-chain cryptographic dead man's switch with encrypted last words, time-locked triggers, and multi-alert architecture. Built into Oden Network XR
-
-**Tools & Systems**
-- **RemindHUB** — local-first productivity dashboard. Task manager, quant signals, live news, canvas draw pad, Pomodoro. One Node.js server
-- **Phone GPS Tracker** — real-time location tracking. Live map rendering, mobile-first, solo built
-- **OSINT & Recon Tooling** — custom intelligence frameworks. Data aggregation, footprint analysis. Built to understand exposure, not exploit it
+**Security & Systems**
+- **OSINT & Recon Frameworks** — data aggregation, footprint mapping. Built to understand exposure
+- **Network Security Research** — packet analysis, vulnerability scanning, penetration testing tooling
+- **Cryptographic Security Models** — encryption strength testing, key exchange protocols, attack resistance
 - **ECU & Automotive Data** — T8Suite, binary map analysis, custom ignition timing workflows
-- **Network Security Research** — packet analysis, vulnerability scanning, penetration testing tooling. Built to understand the attack surface
+- **Phone GPS Tracker** — real-time location tracking, live map rendering, mobile-first
+
+**Tools**
+- **RemindHUB** — local-first productivity dashboard. Task manager, quant signals, live news, canvas draw pad, Pomodoro. One Node.js server
 
 ---
 
 ## Stack
 
-| Language | Frameworks | Web3 |
+| Language | Frameworks | Web3 & Infra |
 |---|---|---|
 | ![TS](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) | ![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat&logo=solidity&logoColor=white) |
 | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | ![Base](https://img.shields.io/badge/Base_L2-0052FF?style=flat&logo=coinbase&logoColor=white) |
 | ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | ![XMTP](https://img.shields.io/badge/XMTP-000000?style=flat&logo=ethereum&logoColor=white) |
 | ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white) | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white) | ![wagmi](https://img.shields.io/badge/wagmi-1C1C1C?style=flat&logo=ethereum&logoColor=white) |
 | ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white) | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) | ![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat&logo=solana&logoColor=white) |
-| ![Binary](https://img.shields.io/badge/Binary_Analysis-555555?style=flat&logo=buffer&logoColor=white) | ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberrypi&logoColor=white) | ![Semaphore](https://img.shields.io/badge/Semaphore_ZK-6F4E37?style=flat&logo=ethereum&logoColor=white) |
+| ![Binary](https://img.shields.io/badge/Binary_Analysis-555555?style=flat&logo=buffer&logoColor=white) | ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white) | ![Semaphore](https://img.shields.io/badge/Semaphore_ZK-4C1D95?style=flat&logo=ethereum&logoColor=white) |
+| | ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberrypi&logoColor=white) | ![EIP4337](https://img.shields.io/badge/EIP--4337_AA-363636?style=flat&logo=ethereum&logoColor=white) |
 
 ---
 
