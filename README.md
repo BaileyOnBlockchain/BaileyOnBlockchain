@@ -23,7 +23,7 @@ Privacy-first decentralised social dapp — built solo, end to end, on Base L2.
 
 Not a wrapper. Not a template. Every system below was designed, coded, and shipped by one person.
 
-**Encrypted Messaging**
+**Encrypted Messaging** (**O-Chat**)
 - End-to-end encrypted direct messaging via **XMTP V3** — multi-device session management, installation limit recovery, attachment support, real-time conversation streaming
 - **Encrypted group chat** — Discord-style architecture with text channels, voice channels (Opus codec), role-based access, nuclear self-delete messages, and real-time group events
 
