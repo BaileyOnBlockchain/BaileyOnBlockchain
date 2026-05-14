@@ -1,4 +1,4 @@
-# BaileyOnBlockchain
+# Don BaileyOnBlockchain
 > Solo builder. Privacy maximalist. Encryption by default.  
 > 5 years in. No team. No VC. No shortcuts.
 
