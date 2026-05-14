@@ -62,10 +62,10 @@ Not a wrapper. Not a template. Every system below was designed, coded, and shipp
 ### CTX Protocol — *Ongoing*
 Active contract building on-chain intelligence and risk tooling for [CTX Protocol](https://ctx.xyz).
 
-**Liquidation Cluster & Squeeze Risk Intelligence** 
+**Liquidation Cluster & Squeeze Risk Intelligence**  
 Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management — not the kind of thing you open-source.
 
-**Token Launch Screener** 
+**Token Launch Screener**  
 MCP server that gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Plugs directly into Claude and other MCP-compatible agents.
 
 > CTX Protocol brought me in because the work is real. The systems above speak for themselves.
@@ -73,6 +73,38 @@ MCP server that gives AI agents real-time token launch screening capabilities �
 ---
 
 ## Open Source
+
+### [Wallet-Fingerprint-Detector](https://github.com/BaileyOnBlockchain/Wallet-Fingerprint-Detector)
+CLI tool that classifies EVM wallets by on-chain behaviour — bots, whales, devs, rug pullers, and degens — across Ethereum and Base.
+
+Built in TypeScript with ethers.js v6. Pulls transaction history, token transfers, internal txs, and RPC data, then runs five weighted classifiers to produce a probabilistic profile with a full terminal report.
+
+**What it detects:**
+- **BOT / SNIPER** — same-block txs, sub-3s burst windows, zero failure rate across large samples, algorithmic gas pricing, Flashbots relay interactions
+- **WHALE** — balance >100 ETH, large single txs, institutional bridge usage (Across, Stargate, Hop), long-term token holds
+- **DEV** — contract deployments, funded-then-deployed pattern, multisig factory interactions, team fund distribution, early token interactor
+- **RUGGER** — Tornado Cash / mixer interactions, deploy→collect→dump→silence lifecycle, LP removal, serial deployer pattern
+- **DEGEN** — DEX aggregator swaps, >50 unique tokens, high failed tx rate, launch sniping within 5 min, multi-chain activity
+
+**Outputs:** Suspicion Index, Sophistication Index, weighted signal breakdown, JSON mode, file export, batch analysis, side-by-side wallet comparison.
+
+---
+
+### [Stealth-Address-Generator](https://github.com/BaileyOnBlockchain/Stealth-Address-Generator)
+Complete TypeScript toolkit for **EIP-5564 stealth addresses** on Base L2 — the same privacy model as Monero, implemented natively on EVM.
+
+Publish one meta-address. Anyone can derive a fresh one-time address only you can detect and spend from. Nothing on-chain links the payment back to you.
+
+**What it does:**
+- **Generate** — creates spending + viewing keypairs, derives a `st:base:0x…` meta-address, saves both private keys to an AES-256-GCM encrypted keystore (scrypt N=131072)
+- **Send** — takes a recipient's meta-address, computes a one-time stealth address via secp256k1 ECDH, outputs the stealth address + EIP-5564 Announcer calldata
+- **Scan** — fetches all `Announcement` events, pre-filters with view-tags (1/256 require full EC check) to find payments belonging to your viewing key
+- **Spend** — derives the stealth private key from `(s + h) mod n`, verifies the address matches, and outputs the key for immediate sweeping
+- **Registry** — register and resolve meta-addresses on-chain via the EIP-6538 Registry
+
+Built on `@noble/curves` for raw secp256k1 ECDH — no wrappers, no shortcuts.
+
+---
 
 ### [WalletConnectFixer](https://github.com/BaileyOnBlockchain/WalletConnectFixer)
 Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures.  
