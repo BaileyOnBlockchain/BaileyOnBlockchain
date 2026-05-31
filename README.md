@@ -106,6 +106,25 @@ Built on `@noble/curves` for raw secp256k1 ECDH — no wrappers, no shortcuts.
 
 ---
 
+### [Whale-Accumulation-Exchange-Pressure-Tool](https://github.com/BaileyOnBlockchain/Whale-Accumulation-Exchange-Pressure-Tool)
+MCP server for on-chain whale accumulation and exchange-pressure intelligence — ETH and BTC.
+
+Tracks large wallet balance changes across a labeled address corpus, monitors CEX inflow/outflow dynamics across known hot and cold wallets, and computes a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
+
+Every address label cites its exact source — Arkham Intelligence, Dune Spellbook, Etherscan name tags, or on-chain heuristics. Nothing is a black box.
+
+**Signal components:**
+- **Whale net flow** (40 pts) — net USD balance change across tracked whales
+- **Exchange net outflow** (35 pts) — coins leaving exchanges = bullish; coins piling in = bearish
+- **New accumulation rate** (15 pts) — fraction of tracked wallets actively accumulating
+- **Whale/exchange ratio** (10 pts) — whale buys vs exchange inflows
+
+**Tools exposed via MCP:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
+
+Deployable on Railway (SSE) or locally (stdio). Redis + DuckDB. All API keys optional — free-tier fallbacks throughout.
+
+---
+
 ### [WalletConnectFixer](https://github.com/BaileyOnBlockchain/WalletConnectFixer)
 Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures.  
 Documented and open-sourced after debugging actual root causes in production.
