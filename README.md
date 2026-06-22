@@ -62,11 +62,11 @@ Not a wrapper. Not a template. Every system below was designed, coded, and shipp
 
 Active contract building on-chain intelligence and risk tooling for [CTX Protocol](https://ctx.xyz).
 
-**Liquidation Cluster & Squeeze Risk Intelligence**  
-Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management — not the kind of thing you open-source.
-
 **Token Launch Screener**  
 MCP server that gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Plugs directly into Claude and other MCP-compatible agents.
+
+**Liquidation Cluster & Squeeze Risk Intelligence**  
+On-chain risk tooling for liquidation cluster analysis, short squeeze probability scoring, and real-time DeFi risk signals across Binance, Bybit, OKX, and Hyperliquid. See full breakdown in the MCP Toolset section.
 
 > CTX Protocol brought me in because the work is real. The systems above speak for themselves.
 
@@ -82,9 +82,39 @@ Endpoint: https://mcp.smithery.run/baileyethanspurs4?mode=smart
 
 ### [Whale Accumulation & Exchange Pressure](https://smithery.ai/@baileyethanspurs4/whale-accumulation-exchange-pressure-tool)
 
-Real-time on-chain accumulation intelligence for ETH and BTC. Tracks large wallet balance shifts, CEX inflow/outflow dynamics, and outputs a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
+MCP server for on-chain whale accumulation and exchange-pressure intelligence — ETH and BTC.
 
-**Available tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
+Tracks large wallet balance changes across a labeled address corpus, monitors CEX inflow/outflow dynamics across known hot and cold wallets, and computes a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
+
+Every address label cites its exact source — Arkham Intelligence, Dune Spellbook, Etherscan name tags, or on-chain heuristics. Nothing is a black box.
+
+**Signal components:**
+- **Whale net flow** (40 pts) — net USD balance change across tracked whales
+- **Exchange net outflow** (35 pts) — coins leaving exchanges = bullish; coins piling in = bearish
+- **New accumulation rate** (15 pts) — fraction of tracked wallets actively accumulating
+- **Whale/exchange ratio** (10 pts) — whale buys vs exchange inflows
+
+**MCP tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
+
+Deployable on Railway (SSE) or locally (stdio). Redis + DuckDB. All API keys optional — free-tier fallbacks throughout.
+
+---
+
+### Liquidation Cluster & Squeeze Risk Intelligence
+
+Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management.
+
+Analyses liquidation cluster formations across Binance, Bybit, OKX, and Hyperliquid — identifies price levels with concentrated open interest, scores short squeeze probability, and streams real-time risk signals via MCP.
+
+**Signal components:**
+- **Cluster engine** — maps liquidation density across price levels, identifies high-risk zones
+- **Squeeze scorer** — probabilistic short squeeze rating based on OI concentration, funding rates, and directional bias
+- **Multi-exchange collectors** — normalised feeds from Binance, Bybit, OKX, Hyperliquid
+- **Real-time pipeline** — Redis-backed streaming, DuckDB time-series storage
+
+Built for CTX Protocol. Not open-sourced.
+
+---
 
 ### [Token Launch Screener](https://smithery.ai/@baileyethanspurs4/token-launch-screener)
 
@@ -129,26 +159,6 @@ Publish one meta-address. Anyone can derive a fresh one-time address only you ca
 - **Registry** — register and resolve meta-addresses on-chain via the EIP-6538 Registry
 
 Built on `@noble/curves` for raw secp256k1 ECDH — no wrappers, no shortcuts.
-
----
-
-### [Whale-Accumulation-Exchange-Pressure-Tool](https://github.com/BaileyOnBlockchain/Whale-Accumulation-Exchange-Pressure-Tool)
-
-MCP server for on-chain whale accumulation and exchange-pressure intelligence — ETH and BTC.
-
-Tracks large wallet balance changes across a labeled address corpus, monitors CEX inflow/outflow dynamics across known hot and cold wallets, and computes a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
-
-Every address label cites its exact source — Arkham Intelligence, Dune Spellbook, Etherscan name tags, or on-chain heuristics. Nothing is a black box.
-
-**Signal components:**
-- **Whale net flow** (40 pts) — net USD balance change across tracked whales
-- **Exchange net outflow** (35 pts) — coins leaving exchanges = bullish; coins piling in = bearish
-- **New accumulation rate** (15 pts) — fraction of tracked wallets actively accumulating
-- **Whale/exchange ratio** (10 pts) — whale buys vs exchange inflows
-
-**MCP tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
-
-Deployable on Railway (SSE) or locally (stdio). Redis + DuckDB. All API keys optional — free-tier fallbacks throughout.
 
 ---
 
