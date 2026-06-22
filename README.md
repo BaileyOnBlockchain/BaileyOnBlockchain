@@ -1,8 +1,7 @@
 # BaileyOnBlockchain
+
 > Solo builder. Privacy maximalist. Encryption by default.  
 > 5 years in. No team. No VC. No shortcuts.
-
----
 
 <div align="center">
 
@@ -16,23 +15,23 @@
 
 ---
 
-## What I'm Building
+## Flagship Project
 
 ### [Oden Network XR](https://odennetworkxr.com)
-Privacy-first decentralised social dapp — built solo, end to end, on Base L2.
 
+Privacy-first decentralised social dapp — built solo, end to end, on Base L2.  
 Not a wrapper. Not a template. Every system below was designed, coded, and shipped by one person.
 
-**Encrypted Messaging** **(O-Chat)** & **(XRGroups)**
+#### Encrypted Messaging — O-Chat & XRGroups
 - End-to-end encrypted direct messaging via **XMTP V3** — multi-device session management, installation limit recovery, attachment support, real-time conversation streaming
 - **Encrypted group chat** — Discord-style architecture with text channels, voice channels (Opus codec), role-based access, nuclear self-delete messages, and real-time group events
 
-**Zero-Knowledge & Anonymous Posting** **(XRFeed)**
+#### Zero-Knowledge & Anonymous Posting — XRFeed
 - **ZK anonymous posts** via **Semaphore + Groth16** — identity commitments, nullifier hashing, on-chain verification. Post without leaving a trace
 - **Self-nuking posts** — auto-delete timestamps baked at the protocol level
 - **AI content moderation** with proof generation
 
-**On-Chain Systems (Base L2)**
+#### On-Chain Systems — Base L2
 - `XR_TOKEN` — ERC-20 with tipping, burning, permit
 - `PRIVNET` — post management, earnings, tip routing
 - `STAKING_VAULT` — lock periods, yield mechanics
@@ -41,16 +40,16 @@ Not a wrapper. Not a template. Every system below was designed, coded, and shipp
 - `SCAM_REPORTS` — community scam registry
 - **EIP-4337 Account Abstraction** — paymaster for gasless transactions
 
-**Reputation & Trust**
+#### Reputation & Trust
 - **Sovereignty Score (0–100)** — wallet age, transaction depth, protocol diversity, cross-chain activity, sybil flags. Not a vibe. Maths
 - **Gitcoin Passport** integration, community scam reporting, multi-factor reputation
 
-**Trading Intelligence**
+#### Trading Intelligence
 - **AI-powered trading signals** — confidence scoring, entry/exit targets, risk/reward ratios
 - **16+ technical indicators** — RSI, MACD, Bollinger Bands, EMA (20/50/200), Stochastic RSI, Williams %R, ROC, ADX, ATR, support/resistance, market regime detection
 - **Multi-source price feeds** — Binance, CoinGecko, Jupiter with fallback routing
 
-**Dead Man's Switch**
+#### Dead Man's Switch
 - On-chain cryptographic dead man's switch — encrypted last words, time-locked triggers, beneficiary configuration, multi-alert architecture
 
 → [Launch dApp](https://odennetworkxr.com) · [@odennetworkXR](https://x.com/odennetworkXR)
@@ -60,6 +59,7 @@ Not a wrapper. Not a template. Every system below was designed, coded, and shipp
 ## Contract Work
 
 ### CTX Protocol — *Ongoing*
+
 Active contract building on-chain intelligence and risk tooling for [CTX Protocol](https://ctx.xyz).
 
 **Liquidation Cluster & Squeeze Risk Intelligence**  
@@ -72,14 +72,39 @@ MCP server that gives AI agents real-time token launch screening capabilities �
 
 ---
 
+## MCP Toolset
+
+Model Context Protocol servers built and published on [Smithery](https://smithery.ai/@baileyethanspurs4). Plug directly into Claude, Cursor, or any MCP-compatible agent.
+
+```
+Endpoint: https://mcp.smithery.run/baileyethanspurs4?mode=smart
+```
+
+### [Whale Accumulation & Exchange Pressure](https://smithery.ai/@baileyethanspurs4/whale-accumulation-exchange-pressure-tool)
+
+Real-time on-chain accumulation intelligence for ETH and BTC. Tracks large wallet balance shifts, CEX inflow/outflow dynamics, and outputs a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
+
+**Available tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
+
+### [Token Launch Screener](https://smithery.ai/@baileyethanspurs4/token-launch-screener)
+
+Gives AI agents real-time token launch screening — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Built for CTX Protocol; available as a standalone MCP server.
+
+**Available tools:** new pair detection · liquidity depth analysis · risk flag scoring · launch signal ranking
+
+> Full profile: [smithery.ai/@baileyethanspurs4](https://smithery.ai/@baileyethanspurs4)
+
+---
+
 ## Open Source
 
 ### [Wallet-Fingerprint-Detector](https://github.com/BaileyOnBlockchain/Wallet-Fingerprint-Detector)
+
 CLI tool that classifies EVM wallets by on-chain behaviour — bots, whales, devs, rug pullers, and degens — across Ethereum and Base.
 
 Built in TypeScript with ethers.js v6. Pulls transaction history, token transfers, internal txs, and RPC data, then runs five weighted classifiers to produce a probabilistic profile with a full terminal report.
 
-**What it detects:**
+**Classifier profiles:**
 - **BOT / SNIPER** — same-block txs, sub-3s burst windows, zero failure rate across large samples, algorithmic gas pricing, Flashbots relay interactions
 - **WHALE** — balance >100 ETH, large single txs, institutional bridge usage (Across, Stargate, Hop), long-term token holds
 - **DEV** — contract deployments, funded-then-deployed pattern, multisig factory interactions, team fund distribution, early token interactor
@@ -91,11 +116,12 @@ Built in TypeScript with ethers.js v6. Pulls transaction history, token transfer
 ---
 
 ### [Stealth-Address-Generator](https://github.com/BaileyOnBlockchain/Stealth-Address-Generator)
+
 Complete TypeScript toolkit for **EIP-5564 stealth addresses** on Base L2 — the same privacy model as Monero, implemented natively on EVM.
 
 Publish one meta-address. Anyone can derive a fresh one-time address only you can detect and spend from. Nothing on-chain links the payment back to you.
 
-**What it does:**
+**Operations:**
 - **Generate** — creates spending + viewing keypairs, derives a `st:base:0x…` meta-address, saves both private keys to an AES-256-GCM encrypted keystore (scrypt N=131072)
 - **Send** — takes a recipient's meta-address, computes a one-time stealth address via secp256k1 ECDH, outputs the stealth address + EIP-5564 Announcer calldata
 - **Scan** — fetches all `Announcement` events, pre-filters with view-tags (1/256 require full EC check) to find payments belonging to your viewing key
@@ -107,6 +133,7 @@ Built on `@noble/curves` for raw secp256k1 ECDH — no wrappers, no shortcuts.
 ---
 
 ### [Whale-Accumulation-Exchange-Pressure-Tool](https://github.com/BaileyOnBlockchain/Whale-Accumulation-Exchange-Pressure-Tool)
+
 MCP server for on-chain whale accumulation and exchange-pressure intelligence — ETH and BTC.
 
 Tracks large wallet balance changes across a labeled address corpus, monitors CEX inflow/outflow dynamics across known hot and cold wallets, and computes a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
@@ -119,15 +146,15 @@ Every address label cites its exact source — Arkham Intelligence, Dune Spellbo
 - **New accumulation rate** (15 pts) — fraction of tracked wallets actively accumulating
 - **Whale/exchange ratio** (10 pts) — whale buys vs exchange inflows
 
-**Tools exposed via MCP:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
+**MCP tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
 
 Deployable on Railway (SSE) or locally (stdio). Redis + DuckDB. All API keys optional — free-tier fallbacks throughout.
 
 ---
 
 ### [WalletConnectFixer](https://github.com/BaileyOnBlockchain/WalletConnectFixer)
-Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures.  
-Documented and open-sourced after debugging actual root causes in production.
+
+Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures, documented and open-sourced after debugging actual root causes in production.
 
 **Problems solved:**
 - MetaMask silently auto-approving stale WC sessions without a signing prompt
@@ -138,31 +165,7 @@ Documented and open-sourced after debugging actual root causes in production.
 
 ---
 
-## MCP Toolset — [Smithery](https://smithery.ai/@baileyethanspurs4)
-
-Model Context Protocol servers I've built and published. Plug directly into Claude, Cursor, and any MCP-compatible agent.
-
-**Endpoint:** `https://mcp.smithery.run/baileyethanspurs4?mode=smart`
-
-### [Whale Accumulation & Exchange Pressure](https://smithery.ai/@baileyethanspurs4/whale-accumulation-exchange-pressure-tool)
-Real-time on-chain accumulation intelligence for ETH and BTC. Tracks large wallet balance shifts, CEX inflow/outflow dynamics, and outputs a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
-
-**Tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
-
----
-
-### [Token Launch Screener](https://smithery.ai/@baileyethanspurs4/token-launch-screener)
-Gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Built for CTX Protocol; available as a standalone MCP server.
-
-**Tools:** new pair detection · liquidity depth analysis · risk flag scoring · launch signal ranking
-
----
-
-> Full toolset: [smithery.ai/@baileyethanspurs4](https://smithery.ai/@baileyethanspurs4)
-
----
-
-## Other Things I've Built
+## Other Work
 
 **AI & Agents**
 - **Grok Cracked** — terminal-native agentic coding assistant. Full tool loop: file editing, bash, ripgrep, MCP server support, streaming Ink UI
