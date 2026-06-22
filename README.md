@@ -371,7 +371,7 @@ Fixes for common WalletConnect + wagmi + Reown AppKit mobile connection failures
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/BaileyOnBlockchain/BaileyOnBlockchain/output/github-snake-dark.svg" alt="contribution snake" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=BaileyOnBlockchain&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=22d3ee&line=9d4edd&point=f472b6&area=true&area_color=9d4edd" alt="contribution graph" />
 
 </div>
 
