@@ -100,7 +100,7 @@ Deployable on Railway (SSE) or locally (stdio). Redis + DuckDB. All API keys opt
 
 ---
 
-### Liquidation Cluster & Squeeze Risk Intelligence
+### [Liquidation Cluster & Squeeze Risk Intelligence](https://smithery.ai/@baileyethanspurs4)
 
 Python-based system for analysing liquidation cluster formations, short squeeze probability, and real-time on-chain risk signals across DeFi markets. Built for protocol-level risk management.
 
@@ -113,6 +113,20 @@ Analyses liquidation cluster formations across Binance, Bybit, OKX, and Hyperliq
 - **Real-time pipeline** — Redis-backed streaming, DuckDB time-series storage
 
 Built for CTX Protocol. Not open-sourced.
+
+---
+
+### [Chain-OSINT Intelligence](https://smithery.ai/@baileyethanspurs4/chain-osint-mcp-server)
+
+Production-grade on-chain OSINT as an MCP server. Wallet profiling, fund tracing, risk scoring, entity labelling, DeFi positions, and more — across 7 EVM chains. Built for investigators, bug bounty hunters, and compliance teams.
+
+**Signal components:**
+- **Wallet profiler** — transaction history, behaviour classification, funding source tracing
+- **Fund tracer** — follows money across hops, bridges, and mixer interactions
+- **Risk scorer** — composite on-chain risk signal with labelled flag breakdown
+- **Entity labeller** — identifies exchanges, protocols, known actors from on-chain heuristics
+- **DeFi positions** — open LP, lending, and staking positions across major protocols
+- **Multi-chain** — covers 7 EVM chains natively
 
 ---
 
