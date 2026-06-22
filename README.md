@@ -138,25 +138,27 @@ Documented and open-sourced after debugging actual root causes in production.
 
 ---
 
-## MCP Toolset — [Smithery](https://smithery.ai/@BaileyOnBlockchain)
+## MCP Toolset — [Smithery](https://smithery.ai/@baileyethanspurs4)
 
 Model Context Protocol servers I've built and published. Plug directly into Claude, Cursor, and any MCP-compatible agent.
 
-### [Whale Accumulation & Exchange Pressure](https://smithery.ai/@BaileyOnBlockchain/whale-accumulation-exchange-pressure-tool)
+**Endpoint:** `https://mcp.smithery.run/baileyethanspurs4?mode=smart`
+
+### [Whale Accumulation & Exchange Pressure](https://smithery.ai/@baileyethanspurs4/whale-accumulation-exchange-pressure-tool)
 Real-time on-chain accumulation intelligence for ETH and BTC. Tracks large wallet balance shifts, CEX inflow/outflow dynamics, and outputs a composite accumulation signal from −100 (strong distribution) to +100 (strong accumulation).
 
 **Tools:** `get_accumulation_signal` · `get_whale_accumulation` · `get_exchange_pressure` · `get_entity_label` · `scan_top_holders` · `refresh_corpus`
 
 ---
 
-### [Token Launch Screener](https://smithery.ai/@BaileyOnBlockchain/token-launch-screener)
+### [Token Launch Screener](https://smithery.ai/@baileyethanspurs4/token-launch-screener)
 Gives AI agents real-time token launch screening capabilities — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Built for CTX Protocol; available as a standalone MCP server.
 
 **Tools:** new pair detection · liquidity depth analysis · risk flag scoring · launch signal ranking
 
 ---
 
-> Full toolset: [smithery.ai/@BaileyOnBlockchain](https://smithery.ai/@BaileyOnBlockchain)
+> Full toolset: [smithery.ai/@baileyethanspurs4](https://smithery.ai/@baileyethanspurs4)
 
 ---
 
