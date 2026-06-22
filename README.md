@@ -132,9 +132,17 @@ Production-grade on-chain OSINT as an MCP server. Wallet profiling, fund tracing
 
 ### [Token Launch Screener](https://smithery.ai/@baileyethanspurs4/token-launch-screener)
 
-Gives AI agents real-time token launch screening — new pair detection, liquidity analysis, risk flags, and launch signal scoring. Built for CTX Protocol; available as a standalone MCP server.
+MCP server that gives AI agents real-time token launch screening capabilities. Detects new pairs the moment they appear on-chain, scores them across liquidity, risk, and signal dimensions, and surfaces actionable intelligence — without switching apps or writing any code.
 
-**Available tools:** new pair detection · liquidity depth analysis · risk flag scoring · launch signal ranking
+Built for CTX Protocol; available as a standalone MCP server. Plugs directly into Claude and any MCP-compatible agent.
+
+**Signal components:**
+- **New pair detection** — monitors on-chain factory events in real time, surfaces new pairs as they are created
+- **Liquidity depth analysis** — measures pool depth, initial LP size, lock status, and concentration risk
+- **Risk flag scoring** — checks contract verification, mint authority, ownership renouncement, honeypot indicators, and deployer history
+- **Launch signal ranking** — composite score combining liquidity health, risk flags, and early momentum signals to rank launch quality
+
+**MCP tools:** `detect_new_pairs` · `analyse_liquidity` · `score_risk_flags` · `rank_launch_signal`
 
 > Full profile: [smithery.ai/@baileyethanspurs4](https://smithery.ai/@baileyethanspurs4)
 
