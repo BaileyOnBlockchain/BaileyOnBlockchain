@@ -13,7 +13,6 @@
 
 [![X](https://img.shields.io/badge/@blockchainbail-000000?style=flat&logo=x&logoColor=white)](https://x.com/blockchainbail)
 [![X Project](https://img.shields.io/badge/@odennetworkXR-0052FF?style=flat&logo=x&logoColor=white)](https://x.com/odennetworkXR)
-[![YouTube](https://img.shields.io/badge/@BailOnBlockchain-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@BailOnBlockchain)
 [![Kick](https://img.shields.io/badge/blockchainbailey-53FC18?style=flat&logo=kick&logoColor=black)](https://kick.com/blockchainbailey)
 [![Website](https://img.shields.io/badge/odennetworkxr.com-4C1D95?style=flat&logo=vercel&logoColor=white)](https://odennetworkxr.com)
 
