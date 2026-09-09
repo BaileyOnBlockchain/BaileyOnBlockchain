@@ -36,19 +36,6 @@
 
 ---
 
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=BaileyOnBlockchain&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=22d3ee&icon_color=9d4edd&text_color=EEEEF0&rank_icon=github" />
-<img height="160" src="https://streak-stats.demolab.com?user=BaileyOnBlockchain&theme=tokyonight&hide_border=true&background=0D1117&ring=22d3ee&fire=f472b6&currStreakLabel=22d3ee&sideLabels=9d4edd&dates=EEEEF0" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=BaileyOnBlockchain&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7" />
-
-</div>
-
 ---
 
 ## Flagship Project
