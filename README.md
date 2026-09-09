@@ -21,7 +21,7 @@
 <div align="center">
 
 ![Years](https://img.shields.io/badge/5%20Years-Building-4C1D95?style=flat-square&logoColor=white)
-![MCP Tools](https://img.shields.io/badge/4%20MCP%20Tools-Published-22d3ee?style=flat-square&logoColor=white)
+![MCP Tools](https://img.shields.io/badge/6%20MCP%20Tools-Published-22d3ee?style=flat-square&logoColor=white)
 ![Chains](https://img.shields.io/badge/7%20EVM%20Chains-Covered-9d4edd?style=flat-square&logoColor=white)
 ![Contracts](https://img.shields.io/badge/2%20Active%20Contracts-CTX%20%2B%20Oden-f472b6?style=flat-square&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Shipping-2dd4bf?style=flat-square&logoColor=white)
